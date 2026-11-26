@@ -1,0 +1,12 @@
+name = "banoty-cloud"
+main = "worker.js"
+compatibility_date = "2026-11-26"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "banoty-db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "banoty-media"
