@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#09020d">
+  <meta name="description" content="بنوتي — عالم صغير معمول علشانك إنتِ وبس.">
+  <title>بنوتي 🥺❤️ | بحبك يا أم العيال</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <!-- LOGIN -->
+  <section id="loginScreen" class="login-screen">
+    <div class="login-top">
+      <div class="crown">♛</div>
+      <div class="logo">بنوتي</div>
+      <div class="logo-sub">♡ My Little Princess ♡</div>
+    </div>
+    <div class="login-art">
+      <div class="glow-heart">♥</div>
+      <div class="tiny-heart h1">♥</div><div class="tiny-heart h2">♡</div>
+      <div class="moon"></div>
+    </div>
+    <div class="login-panel">
+      <p class="overline">مكان صغير... معمول لقلبك</p>
+      <h1>بحبك يا أم العيال <span>🥹❤️</span></h1>
+      <p class="login-desc">المكان ده معمول علشانك إنتِ وبس يا بنوتي.</p>
+      <form id="loginForm">
+        <input id="password" type="password" inputmode="numeric" placeholder="اكتبي كلمة السر يا روحي" autocomplete="off" required>
+        <button class="glow-button" type="submit">افتحي عالمنا يا روحي <b>♥</b></button>
+        <p id="loginError" class="error" aria-live="polite"></p>
+      </form>
+    </div>
+    <p class="login-sign">من قلب أحمد لقلب بنوتي <span>♡</span></p>
+  </section>
+
+  <!-- WEBSITE -->
+  <main id="website" class="website hidden">
+    <header class="topbar">
+      <button class="outline-pill" data-page="home">⌂ الرئيسية</button>
+      <a class="top-logo" href="#" data-page="home">بنوتي <small>♡ My Little Princess ♡</small></a>
+      <button class="outline-pill music-indicator" id="musicIndicator"><i></i> الموسيقى متوقفة</button>
+    </header>
+
+    <section id="home" class="page active">
+      <div class="home-hero">
+        <div class="hero-art">
+          <div class="hero-moon"></div>
+          <div class="hero-castle">♜</div>
+          <div class="hero-couple">♡</div>
+          <div class="hero-caption">معًا دائمًا <span>♥</span></div>
+        </div>
+        <div class="home-copy">
+          <div class="ornament">✧ ♡ ✧</div>
+          <p class="overline">إلى بنوتي... إلى أجمل حاجة حصلتلي</p>
+          <h1>إنتِ حكايتي <span>❤️</span></h1>
+          <p>من أول ما عرفتك وأنا اكتشفت إن في ناس وجودها لوحده بيغيّر كل حاجة. إنتِ مش مجرد شخص بحبه، إنتِ بقيتي جزء من تفاصيل يومي، من تفكيري، من أحلامي، ومن كل حاجة حلوة نفسي أعيشها.</p>
+          <div class="brush-note">عملتلك المكان ده علشان كل ما تفتحيه تفتكري إن فيه قلب بيحبك وبيقدّر وجودك.</div>
+        </div>
+        <img class="teddy" src="assets/teddy-bear.jpg" alt="دبدوب يحمل قلبًا">
+      </div>
+
+      <div class="home-actions">
+        <button class="action-tile" data-page="explore"><span>💌</span><b>اكتشفي<br>عالمك <i>♥</i></b></button>
+        <button class="action-tile" id="chooseMusic"><span>🎧</span><b>اسمعي<br>أغانينا <i>♫</i></b></button>
+        <button class="action-tile" data-page="letters"><span>🎁</span><b>افتحي<br>رسائلي السرية <i>♥</i></b></button>
+      </div>
+      <div class="scroll-cue">اسحبي للأسفل لاكتشاف المزيد <b>⌄</b></div>
+
+      <section class="counter-card">
+        <div class="counter-flower">🌹</div>
+        <p class="overline">من يوم ما حكايتنا بدأت</p>
+        <h2>معاكي كل يوم حكاية</h2>
+        <div class="counter">
+          <div><b id="days">0</b><small>يوم</small></div>
+          <div><b id="hours">0</b><small>ساعة</small></div>
+          <div><b id="minutes">0</b><small>دقيقة</small></div>
+          <div><b id="seconds">0</b><small>ثانية</small></div>
+        </div>
+        <small class="muted">من 21 يونيو 2026 ♡</small>
+      </section>
+
+      <div class="forever">∞ <span>معاكي دائمًا... وأبدًا</span> ∞</div>
+    </section>
+
+    <section id="explore" class="page">
+      <div class="explore-hero">
+        <div class="explore-scene">
+          <div class="explore-moon"></div><div class="explore-castle">♜</div>
+          <div class="couple-silhouette">♡</div>
+          <span class="scene-sign">معًا دائمًا ♥</span>
+        </div>
+        <div class="explore-title"><span>♥</span> اكشفي عالمنا <span>♥</span></div>
+        <p>هنا هتكتشفي كل حاجة بتخلّي عالمنا أجمل... لأنك تستحقين كل الحب ♡</p>
+      </div>
+      <div class="cards-grid">
+        <button class="world-card" data-page="gallery"><span class="card-picture">📸</span><b>معرض الذكريات</b><small>كل صورة وراها حكاية ♡</small></button>
+        <button class="world-card" data-page="letters"><span class="card-picture">💌</span><b>صندوق الرسائل</b><small>مفاجآت ورسائل سرية ♡</small></button>
+        <button class="world-card" data-page="messages"><span class="card-picture">💗</span><b>رسائل بينا</b><small>رسالة من أحمد ورسالة من بنوتي ♡</small></button>
+        <button class="world-card" id="cardMusic"><span class="card-picture vinyl-mini">♫</span><b>أغنيتنا الخاصة</b><small>بحبك... دايمًا ♡</small></button>
+        <button class="world-card" data-page="timeline"><span class="card-picture">⌛</span><b>حكايتنا الزمنية</b><small>من يوم ما بدأنا ♡</small></button>
+        <button class="world-card" data-page="dreams"><span class="card-picture">☁️</span><b>أحلامنا</b><small>أمنياتنا سوا ♡</small></button>
+        <button class="world-card" data-page="future"><span class="card-picture">🌹</span><b>رسائل المستقبل</b><small>رسائل من بكرة ♡</small></button>
+        <button class="world-card" data-page="comfort"><span class="card-picture">🧸</span><b>لو يومك مش حلو</b><small>أنا هنا معاكي ♡</small></button>
+        <button class="world-card" data-page="surprise"><span class="card-picture">🎁</span><b>المفاجآت</b><small>هدايا من قلبي ♡</small></button>
+        <button class="world-card" data-page="secret"><span class="card-picture">🔐</span><b>الرسالة السرية</b><small>أقرب رسالة لقلبك ♡</small></button>
+      </div>
+      <button class="back-button" data-page="home">⌂ العودة للرئيسية</button>
+    </section>
+
+    <section id="gallery" class="page subpage">
+      <div class="page-heading"><p class="overline">لحظات تستاهل تفضل</p><h2>معرض الذكريات 📸</h2><p>ضيفي صوركم واحتفظوا بالحكايات الحلوة.</p></div>
+      <label class="upload-button">＋ إضافة صور وفيديوهات<input id="photoInput" type="file" accept="image/*,video/*" multiple hidden></label>
+      <p class="media-note">كل صورة أو فيديو تضيفوه بيتحفظ في مساحة الموقع على نفس الجهاز، ويمكن حذفه لاحقًا. للمزامنة بين هاتفين فعّلي التخزين السحابي من إعدادات المشروع.</p>
+      <div id="photoGrid" class="photo-grid"><p class="empty">لسه مستنيين أول ذكرى تتحط هنا 🌹</p></div>
+      <button class="back-button" data-page="explore">رجوع لعالمنا</button>
+    </section>
+
+    <section id="letters" class="page subpage">
+      <div class="page-heading"><p class="overline">افتحي واحدة كل ما تحتاجي ابتسامة</p><h2>صندوق الرسائل 💌</h2></div>
+      <div class="envelopes">
+        <button data-letter="morning">🌸 <b>رسالة ليومك</b><small>افتحيها وابدئي بابتسامة</small></button>
+        <button data-letter="miss">💗 <b>لما توحشيني</b><small>كلمتين من قلبي</small></button>
+        <button data-letter="proud">✨ <b>أنا فخور بيكي</b><small>رسالة مخصوص ليكي</small></button>
+      </div>
+      <div id="envelopeMessage" class="message-card hidden"></div>
+      <button class="back-button" data-page="explore">رجوع لعالمنا</button>
+    </section>
+
+    <section id="messages" class="page subpage">
+      <div class="page-heading"><p class="overline">كلام من القلب للقلب</p><h2>رسائل بينا 💌</h2><p>كل واحد يسيب للتاني رسالة يقدر يرجعلها وقت ما يحب.</p></div>
+      <div class="message-compose">
+        <label for="messageSender">مين بيكتب الرسالة؟</label>
+        <select id="messageSender"><option value="أحمد">أحمد ❤️</option><option value="بنوتي">بنوتي 🥹❤️</option></select>
+        <textarea id="messageText" maxlength="3000" rows="4" placeholder="اكتب كلامك من قلبك..." required></textarea>
+        <button id="sendMessage" class="glow-button" type="button">إرسال الرسالة 💗</button>
+        <p class="media-note" id="messageSyncStatus">الرسائل محفوظة على هذا الجهاز. يمكن تفعيل المزامنة السحابية في إعدادات المشروع.</p>
+      </div>
+      <div class="message-tabs"><button class="active" data-inbox="all">كل الرسائل</button><button data-inbox="أحمد">رسائل أحمد</button><button data-inbox="بنوتي">رسائل بنوتي</button></div>
+      <div id="messageList" class="message-list"><p class="empty">لسه مستنيين أول رسالة من القلب ❤️</p></div>
+      <button class="back-button" data-page="explore">رجوع لعالمنا</button>
+    </section>
+
+    <section id="timeline" class="page subpage">
+      <div class="page-heading"><p class="overline">بداية حكاية لسه بتكمل</p><h2>حكايتنا الزمنية ⏳</h2><p>21 يونيو 2026 — بداية العدّاد بتاعنا.</p></div>
+      <div class="timeline"><article><i>♥</i><b>بداية الحكاية</b><small>21 يونيو 2026</small><p>اليوم اللي بدأ منه عدّاد حكايتنا.</p></article><article><i>✧</i><b>والباقي لسه جاي</b><small>أيام وذكريات هنضيفها سوا</small><p>كل لحظة حلوة تستاهل تتحفظ.</p></article></div>
+      <button class="back-button" data-page="explore">رجوع لعالمنا</button>
+    </section>
+
+    <section id="dreams" class="page subpage">
+      <div class="page-heading"><p class="overline">أحلام صغيرة... وأمنيات كبيرة</p><h2>أحلامنا ☁️</h2><p>اكتبي حلم نفسك نحققه سوا.</p></div>
+      <form id="dreamForm" class="dream-form"><input id="dreamInput" maxlength="120" placeholder="حلم نفسي نعيشه سوا..." required><button>＋ أضيفي حلم</button></form>
+      <ul id="dreamList"><li>نفضل دايمًا سند وراحة لبعض ❤️</li></ul>
+      <button class="back-button" data-page="explore">رجوع لعالمنا</button>
+    </section>
+
+    <section id="future" class="page subpage">
+      <div class="page-heading"><p class="overline">رسالة من النهارده لبكرة</p><h2>رسائل المستقبل 🌹</h2></div>
+      <div class="parchment"><p>يا بنوتي، أتمنى لما تقري الرسالة دي تكوني بخير ومبسوطة، وتكون أيامنا الجاية مليانة طمأنينة ونجاحات وضحك. خليكي فاكرة إنك تستاهلي كل حاجة حلوة.</p><b>بحبك — أحمد ❤️</b></div>
+      <button class="back-button" data-page="explore">رجوع لعالمنا</button>
+    </section>
+
+    <section id="comfort" class="page subpage">
+      <div class="page-heading"><p class="overline">خدي نفس يا حبوبتي</p><h2>لو يومك مش حلو 🧸</h2><p>مش لازم تبقي قوية طول الوقت. خدي وقتك وافتكري إنك غالية ومش لوحدك.</p></div>
+      <div class="parchment"><p>يا قلب بابا، أتمنى أقدر أخفف عنك أي حاجة مضايقاكي. لو محتاجة تتكلمي أنا هسمعك، ولو محتاجة وقت لنفسك خديه براحتك. ابتسامتك تهمني، وراحتك أهم. ❤️</p><b>أنا هنا — أحمد</b></div>
+      <button class="back-button" data-page="explore">رجوع لعالمنا</button>
+    </section>
+
+    <section id="surprise" class="page subpage">
+      <div class="page-heading"><p class="overline">هدية صغيرة لقلبك</p><h2>المفاجأة 🎁</h2></div>
+      <button id="giftButton" class="gift">🎁<small>اضغطي وافتحي هديتك</small></button>
+      <div id="giftMessage" class="message-card hidden">أجمل هدية في حكايتي هي وجودك فيها يا بنوتي. 🥹❤️</div>
+      <button class="back-button" data-page="explore">رجوع لعالمنا</button>
+    </section>
+
+    <section id="secret" class="page subpage secret-page">
+      <div class="page-heading"><p class="overline">آخر مفاجأة... من قلبي لقلبك</p><h2>القلب الأخير ❤️</h2><p>اضغطي على القلب يا بنوتي علشان تفتحي رسالتي.</p></div>
+      <button id="openHeart" class="heart-button"><span>♥</span><small>اضغطي على القلب</small></button>
+      <div id="loveLetter" class="love-letter hidden">
+        <div class="letter-heading">♡ رسالة من قلب أحمد ♡</div>
+        <div id="typedText" class="typed-text"></div>
+        <div class="signature">اللي بيحبك أوي <span>❤️</span></div>
+        <div class="letter-actions"><button id="replayLetter">↻ إعادة قراءة الرسالة</button><button data-page="home">⌂ العودة للموقع</button></div>
+      </div>
+    </section>
+
+    <footer class="footer">من قلب أحمد لقلب بنوتي <span>♥</span> دايمًا وأبدًا</footer>
+  </main>
+
+  <div class="music-player" id="musicPlayer">
+    <button id="playButton" aria-label="تشغيل أو إيقاف">▶</button>
+    <div class="record-art"><span>♥</span></div>
+    <div class="track"><b id="trackName">أغنيتنا الخاصة</b><small id="trackTime">أغاني أحمد المفضلة لبنوتي ❤️</small></div>
+    <input id="progress" type="range" min="0" max="100" value="0" aria-label="تقدم الأغنية">
+    <audio id="audio"></audio>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
