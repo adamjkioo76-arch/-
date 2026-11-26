@@ -100,7 +100,6 @@
         <p>هنا هتكتشفي كل حاجة بتخلّي عالمنا أجمل... لأنك تستحقين كل الحب ♡</p>
       </div>
       <div class="cards-grid">
-        <button class="world-card" data-page="gallery"><span class="card-picture">📸</span><b>معرض الذكريات</b><small>كل صورة وراها حكاية ♡</small></button>
         <button class="world-card" data-page="letters"><span class="card-picture">💌</span><b>صندوق الرسائل</b><small>مفاجآت ورسائل سرية ♡</small></button>
         <button class="world-card" data-page="messages"><span class="card-picture">💗</span><b>رسائل بينا</b><small>رسالة من أحمد ورسالة من بنوتي ♡</small></button>
         <button class="world-card" id="cardMusic"><span class="card-picture vinyl-mini">♫</span><b>أغنيتنا الخاصة</b><small>بحبك... دايمًا ♡</small></button>
@@ -112,14 +111,6 @@
         <button class="world-card" data-page="secret"><span class="card-picture">🔐</span><b>الرسالة السرية</b><small>أقرب رسالة لقلبك ♡</small></button>
       </div>
       <button class="back-button" data-page="home">⌂ العودة للرئيسية</button>
-    </section>
-
-    <section id="gallery" class="page subpage">
-      <div class="page-heading"><p class="overline">لحظات تستاهل تفضل</p><h2>معرض الذكريات 📸</h2><p>ضيفي صوركم واحتفظوا بالحكايات الحلوة.</p></div>
-      <label class="upload-button">＋ إضافة صور وفيديوهات<input id="photoInput" type="file" accept="image/*,video/*" multiple hidden></label>
-      <p class="media-note">كل صورة أو فيديو تضيفوه بيتحفظ في مساحة الموقع على نفس الجهاز، ويمكن حذفه لاحقًا. للمزامنة بين هاتفين فعّلي التخزين السحابي من إعدادات المشروع.</p>
-      <div id="photoGrid" class="photo-grid"><p class="empty">لسه مستنيين أول ذكرى تتحط هنا 🌹</p></div>
-      <button class="back-button" data-page="explore">رجوع لعالمنا</button>
     </section>
 
     <section id="letters" class="page subpage">
@@ -140,7 +131,7 @@
         <select id="messageSender"><option value="أحمد">أحمد ❤️</option><option value="بنوتي">بنوتي 🥹❤️</option></select>
         <textarea id="messageText" maxlength="3000" rows="4" placeholder="اكتب كلامك من قلبك..." required></textarea>
         <button id="sendMessage" class="glow-button" type="button">إرسال الرسالة 💗</button>
-        <p class="media-note" id="messageSyncStatus">الرسائل محفوظة على هذا الجهاز. يمكن تفعيل المزامنة السحابية في إعدادات المشروع.</p>
+        <p class="media-note" id="messageSyncStatus">الرسائل محفوظة على هذا الجهاز بشكل دائم.</p>
       </div>
       <div class="message-tabs"><button class="active" data-inbox="all">كل الرسائل</button><button data-inbox="أحمد">رسائل أحمد</button><button data-inbox="بنوتي">رسائل بنوتي</button></div>
       <div id="messageList" class="message-list"><p class="empty">لسه مستنيين أول رسالة من القلب ❤️</p></div>
@@ -201,7 +192,7 @@
     <audio id="audio"></audio>
   </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="config.js"></script>
+  
   <script src="script.js"></script>
 </body>
 </html>
