@@ -6,6 +6,62 @@ const website = document.getElementById("website");
 const toast = document.getElementById("toast");
 let toastTimer, typingTimer;
 
+/* =====================================
+   BANOTY - SUPABASE CONNECTION
+   ===================================== */
+
+const SUPABASE_URL = "https://ujxbshccuvltwebrqeqr.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_HX4n8OZVU0b6ZXJtNesRjA_UhPEx4vG";
+
+if (!window.supabase) {
+  console.error("Supabase library is not loaded.");
+  throw new Error("Supabase library missing");
+}
+
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY,
+  {
+    auth: {
+      persistSession: true,
+      autoRefreshToken: true,
+      detectSessionInUrl: true
+    }
+  }
+);
+
+async function initializeBanotyCloud() {
+  try {
+    const { data: sessionData, error: sessionError } =
+      await supabaseClient.auth.getSession();
+
+    if (sessionError) throw sessionError;
+
+    if (!sessionData.session) {
+      const { error } =
+        await supabaseClient.auth.signInAnonymously();
+
+      if (error) throw error;
+    }
+
+    const { data: userData, error: userError } =
+      await supabaseClient.auth.getUser();
+
+    if (userError) throw userError;
+
+    console.log("BANOTY cloud connected.");
+    console.log("Anonymous user ID:", userData.user.id);
+
+    return userData.user.id;
+
+  } catch (error) {
+    console.error("BANOTY cloud connection failed:", error);
+    return null;
+  }
+}
+
+const banotyCloudReady = initializeBanotyCloud();
+
 function notify(message){
   toast.textContent = message;
   toast.classList.add("show");
